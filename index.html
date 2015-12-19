@@ -1,0 +1,51 @@
+<html ng-app="homeApp">
+<head>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <script src='angularjs/angular.js'></script>
+</head>    
+<body>
+    <!-- header -->
+    <div class="jumbotron">
+        <div class="container text-center">
+            <H1>Mike Dice .net</H1>
+            <H3>Raspberry Pi2 Web Server</H3> 
+        </div>
+    </div>
+    <!-- content -->
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="well col-md-4" weather-data ng-cloak class="container">
+            <H4>Current Conditions in Mike's office:</H4>
+            <ul>
+                <li>Temperature: {{tempF|number:2}}&deg;F</li>
+                <li>Barometric Pressure: {{pressureMb|number:2}}mb</li>
+            </ul>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <h4 class="col-sm-4 text-left">December 14, 2015</h4>
+                        <h4 class="col-sm-4 text-center">My Raspberry Pi 2</h4>
+                        <h4 class="col-sm-4 text-right"><a href="blog/2015/about-raspberry-pi2.html">More...</a></h4>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <p></p>
+                    <p>I've been writing a lot of posts lately on social media about my Raspberry Pi computers. I recently acquired two of these devices and my excitement about them has grown quickly. So, I decided to write a series of posts about my experience with these devices and some of the applications for them that I've come up with. There is already a ton of information about Raspberry Pi on the internet too and it is all easy to find using a search in your favorite search engine. So, if you don't get what you are looking for from my posts have no fear because there is a high chance of finding it on the web.</p>
+                    <a href="blog/2015/about-raspberry-pi2.html">Read more ...</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+     </div>
+    
+    <script src='scripts/home.js'></script>
+</body>
+</html>
