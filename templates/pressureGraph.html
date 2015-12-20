@@ -1,0 +1,11 @@
+<div class='bar-graph'>
+    <div class='y-axis-labels'>
+        <div class='row'><div class='max'>{{max|number:2}}mb</div></div>
+        <div class='row'><div class='median'>{{median|number:2}}mb</div></div>
+        <div class='row'><div class='min'>{{min|number:2}}mb</div></div>
+        
+    </div>
+    <ul class='bars'>
+        <li ng-style="{height: segment}" ng-repeat="segment in graphSegments track by $index"></li>
+    </ul>
+</div>

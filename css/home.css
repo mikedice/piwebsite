@@ -1,0 +1,44 @@
+.bar-graph {
+  height: 80px;
+}
+.bar-graph .bars {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  height: 100%;
+}
+.bar-graph .bars li {
+  background-color: darkturquoise;
+  border-radius: 1px 1px 0 0;
+  /* Remember vendor prefixes */
+  display: inline-block;
+  list-style-type: none;
+  min-width: 8px;
+  position: relative;
+  text-align: center;
+  vertical-align: bottom;
+}
+.bar-graph .y-axis-labels {
+  display: inline-table;
+  height: 100%;
+  vertical-align: top;
+  margin-top: 4px;
+  margin-right: 2px;
+}
+.bar-graph .y-axis-labels .row {
+  display: table-row;
+  height: 33.33%;
+  margin: 0;
+}
+.bar-graph .y-axis-labels .max {
+  vertical-align: top;
+  display: table-cell;
+}
+.bar-graph .y-axis-labels .median {
+  vertical-align: middle;
+  display: table-cell;
+}
+.bar-graph .y-axis-labels .min {
+  vertical-align: bottom;
+  display: table-cell;
+}
