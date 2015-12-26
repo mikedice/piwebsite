@@ -1,44 +1,55 @@
-.bar-graph{
+.bar-graph {
     height: 80px; // view model is computed using 80px fixed height graph
-    .bars{
-        margin:0;
-        padding:0;
-        display:inline-block;
-        height:100%;
+    margin-top: 20px;
+
+    .bars {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        height: 100%;
+
         li {
             background-color: darkturquoise;
             border-radius: 1px 1px 0 0; /* Remember vendor prefixes */
             display: inline-block;
             list-style-type: none;
-            min-width:8px;
+            min-width: 8px;
             position: relative;
             text-align: center;
             vertical-align: bottom;
         }
     }
-    .y-axis-labels{
-        display:inline-table;
-        height:100%;
+
+    .y-axis-labels {
+        display: inline-table;
+        height: 100%;
         vertical-align: top;
         margin-top: 4px;
         margin-right: 2px;
-        .row{
-            display:table-row;
-            height:33.33%;
-            margin:0;
+
+        .label-row {
+            display: table-row;
+            height: 33.33%;
+            margin: 0;
         }
-        .max{
+
+        .max {
             vertical-align: top;
-            display:table-cell;
+            display: table-cell;
         }
-        .median{
+
+        .median {
             vertical-align: middle;
-            display:table-cell;
+            display: table-cell;
         }
-        .min{
+
+        .min {
             vertical-align: bottom;
-            display:table-cell;
+            display: table-cell;
         }
-        
+    }
+
+    .x-axis-label {
+        text-align: center;
     }
 }
