@@ -1,5 +1,11 @@
+@media (max-width: 480px) {
+  body {
+    font-size: 30px;
+  }
+}
 .bar-graph {
   margin-top: 20px;
+  display: inline;
 }
 .bar-graph .bars {
   margin: 0;
@@ -43,5 +49,6 @@
   display: table-cell;
 }
 .bar-graph .x-axis-label {
-  padding-left: 20%;
+  padding-left: 10%;
+  height: 20px;
 }

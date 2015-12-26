@@ -3,39 +3,44 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <script src='angularjs/angular.js'></script>
-</head>    
+</head>
 <body>
     <!-- header -->
     <div class="jumbotron">
         <div class="container text-center">
             <H1>Mike Dice .net</H1>
-            <H3>Raspberry Pi2 Web Server</H3> 
+            <H3>Raspberry Pi2 Web Server</H3>
         </div>
     </div>
     <!-- content -->
     <div class="row">
-        <div class="col-md-4 col-xs-3"></div>
-        <div class="well col-md-4 col-xs-6" weather-data ng-cloak class="container">
-            <H4>Current Conditions in Mike's office:</H4>
-            <ul>
-                <li>Temperature: {{tempF|number:2}}&deg;F</li>
-                <li>Barometric Pressure: {{pressureMb|number:2}}mb</li>
-            </ul>
-            <div pressure-graph></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    Current Conditions in Mike's Office
+                </div>
+                <div class="panel-body">
+                    <div weather-data ng-cloak>
+                        <ul class="list-unstyled">
+                            <li>Current Temperature: {{tempF|number:2}}&deg;F</li>
+                            <li>Current Barometric Pressure: {{pressureMb|number:2}}mb</li>
+                        </ul>
+                        <div pressure-graph></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 col-xs-3"></div>
+        <div class="col-md-2"></div>
     </div>
-    
+
+
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="row">
-                        <h4 class="col-sm-4 text-left">December 14, 2015</h4>
-                        <h4 class="col-sm-4 text-center">My Raspberry Pi 2</h4>
-                        <h4 class="col-sm-4 text-right"><a href="blog/2015/about-raspberry-pi2.html">More...</a></h4>
-                    </div>
+                <div class="panel-heading text-center">
+                    My Raspberry Pi 2
                 </div>
                 <div class="panel-body">
                     <p></p>
@@ -45,8 +50,8 @@
             </div>
         </div>
         <div class="col-md-2"></div>
-     </div>
-    
+    </div>
+
     <script src='scripts/home.js'></script>
 </body>
 </html>
