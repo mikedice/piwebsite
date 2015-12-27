@@ -1,19 +1,56 @@
+.temp-heading {
+    font-size: 18px;
+}
+
 .bar-graph {
-     margin-top: 20px;
-     display:inline;
+    margin-top: 20px;
+    display: inline-table;
+    font-size: 30px;
+
+    .bar-graph-row {
+        display: table-row;
+    }
+
+    .bar-graph-cell1 {
+        display: table-cell;
+        width: 160px;
+    }
+
+    .bar-graph-cell2 {
+        display: table-cell;
+        min-width: 720px;
+        // font-size: 200%;
+    }
 
     .bars {
-        margin: 0;
-        padding: 0;
-        display: inline-block;
-        height: 80px;
+        height: 160px;
 
         li {
             background-color: darkturquoise;
             border-radius: 1px 1px 0 0; /* Remember vendor prefixes */
             display: inline-block;
             list-style-type: none;
-            min-width: 8px;
+            /* Large desktops and laptops */
+            @media (min-width: 1200px) {
+                min-width: 14px;
+            }
+            /* Landscape tablets and medium desktops */
+            @media (min-width: 992px) and (max-width: 1199px) {
+                min-width: 14px;
+            }
+            /* Portrait tablets and small desktops */
+            @media (min-width: 768px) and (max-width: 991px) {
+                min-width: 20px;
+            }
+            /* Landscape phones and portrait tablets */
+            @media (max-width: 767px) {
+                min-width: 20px;
+            }
+            /* Portrait phones and smaller */
+            @media (max-width: 480px) {
+                min-width: 20px;
+            }
+
             position: relative;
             text-align: center;
             vertical-align: bottom;
@@ -22,7 +59,7 @@
 
     .y-axis-labels {
         display: inline-table;
-        height: 80px;
+        height: 160px;
         vertical-align: top;
         margin-top: 4px;
         margin-right: 2px;
@@ -31,6 +68,12 @@
             display: table-row;
             height: 33.33%;
             margin: 0;
+        }
+
+        .label-cell {
+            display: table-cell;
+            width: 160px;
+            // font-size: 200%;
         }
 
         .max {
