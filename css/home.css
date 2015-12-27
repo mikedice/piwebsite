@@ -4,7 +4,6 @@
 .bar-graph {
   margin-top: 20px;
   display: inline-table;
-  font-size: 30px;
 }
 .bar-graph .bar-graph-row {
   display: table-row;
@@ -47,17 +46,17 @@
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .bar-graph .bars li {
-    min-width: 20px;
+    min-width: 7px;
   }
 }
 @media (max-width: 767px) {
   .bar-graph .bars li {
-    min-width: 20px;
+    min-width: 7px;
   }
 }
 @media (max-width: 480px) {
   .bar-graph .bars li {
-    min-width: 20px;
+    min-width: 7px;
   }
 }
 .bar-graph .y-axis-labels {
