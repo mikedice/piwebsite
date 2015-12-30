@@ -16,6 +16,7 @@
 }
 .bar-graph .bar-graph-cell2 {
   display: table-cell;
+  text-align: left;
 }
 .bar-graph .bars {
   height: 160px;
