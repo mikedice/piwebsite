@@ -1,17 +1,19 @@
-<div class='bar-graph'>
-    <div class='bar-graph-row'>
-        <div class='y-axis-labels'>
-            <div class='label-row'><div class='label-cell max'>{{max|number:2}}mb</div></div>
-            <div class='label-row'><div class='label-cell median'>{{median|number:2}}mb</div></div>
-            <div class='label-row'><div class='label-cell min'>{{min|number:2}}mb</div></div>
-        </div>
-        <ul class='bars list-unstyled bar-graph-cell2'>
-            <li ng-style="{height: (segment*2)+1}" ng-repeat="segment in graphSegments track by $index"></li>
-        </ul>
-    </div>
-    <div class="bar-graph-row">
-
-            <div class="bar-graph-cell1"></div>
-            <div class="bar-graph-cell2">Pressure change last 24 hours</div>
-    </div>
+<div class='bar-graph-container'>
+	<div class='bar-graph'>
+	    <div class='bar-graph-row'>
+	        <div class='y-axis-labels'>
+	            <div class='label-row'><div class='label-cell max'>{{max|number:2}}mb</div></div>
+	            <div class='label-row'><div class='label-cell median'>{{median|number:2}}mb</div></div>
+	            <div class='label-row'><div class='label-cell min'>{{min|number:2}}mb</div></div>
+	        </div>
+	        <ul class='bars list-unstyled bar-graph-cell2'>
+	            <li ng-style="{height: (segment*2)+1}" ng-repeat="segment in graphSegments track by $index"></li>
+	        </ul>
+	    </div>
+	    <div class="bar-graph-row">
+	
+	            <div class="bar-graph-cell1"></div>
+	            <div class="bar-graph-cell2">Pressure change last 24 hours</div>
+	    </div>
+	</div>
 </div>

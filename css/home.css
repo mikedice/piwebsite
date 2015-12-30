@@ -1,6 +1,9 @@
 .temp-heading {
   font-size: 18px;
 }
+.bar-graph-container {
+  text-align: center;
+}
 .bar-graph {
   margin-top: 20px;
   display: inline-table;
@@ -10,11 +13,9 @@
 }
 .bar-graph .bar-graph-cell1 {
   display: table-cell;
-  width: 160px;
 }
 .bar-graph .bar-graph-cell2 {
   display: table-cell;
-  min-width: 720px;
 }
 .bar-graph .bars {
   height: 160px;
@@ -25,39 +26,9 @@
   /* Remember vendor prefixes */
   display: inline-block;
   list-style-type: none;
-  /* Large desktops and laptops */
-  /* Landscape tablets and medium desktops */
-  /* Portrait tablets and small desktops */
-  /* Landscape phones and portrait tablets */
-  /* Portrait phones and smaller */
-  position: relative;
+  min-width: 7px;
   text-align: center;
   vertical-align: bottom;
-}
-@media (min-width: 1200px) {
-  .bar-graph .bars li {
-    min-width: 14px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .bar-graph .bars li {
-    min-width: 14px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .bar-graph .bars li {
-    min-width: 7px;
-  }
-}
-@media (max-width: 767px) {
-  .bar-graph .bars li {
-    min-width: 7px;
-  }
-}
-@media (max-width: 480px) {
-  .bar-graph .bars li {
-    min-width: 7px;
-  }
 }
 .bar-graph .y-axis-labels {
   display: inline-table;
@@ -73,7 +44,6 @@
 }
 .bar-graph .y-axis-labels .label-cell {
   display: table-cell;
-  width: 160px;
 }
 .bar-graph .y-axis-labels .max {
   vertical-align: top;
