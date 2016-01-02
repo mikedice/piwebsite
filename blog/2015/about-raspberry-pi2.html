@@ -2,7 +2,10 @@
 <head>
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../css/home.css">
-    <script src='../../angularjs/angular.js'></script>
+    <script type="text/javascript" src="../../tinymce-dist/tinymce.js"></script>
+    <script type="text/javascript" src='../../angularjs/angular.js'></script>
+    <script type="text/javascript" src="../../angular-sanitize/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="../../angular-ui-tinymce/tinymce.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>    
 <body>
@@ -14,7 +17,7 @@
         </div>
     </div>
     <!-- content -->
-        <div class="row">
+    <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <div class="panel panel-default">
@@ -51,6 +54,18 @@
                 </div>
             </div>
         <div class="col-md-2"></div>
+    </div>
+    <div class='row'>
+       <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">Comments</div>
+                <div class="panel-body">
+                  <div comments article-path='about-raspberry-pi2.comments.json'></div>
+                </div>
+             </div>
+          </div>
+          <div class='col-md-2'></div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

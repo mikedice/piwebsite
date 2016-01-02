@@ -1,4 +1,4 @@
-var app = angular.module("homeApp", []);
+var app = angular.module("homeApp", ['ui.tinymce','ngSanitize']);
 app.directive('weatherData', ['$http', function($http){
     return{
 	restrict: 'A',
@@ -24,6 +24,36 @@ app.directive('pressureGraph', ['$http', function($http){
                     scope.min = result.data.min;
                     scope.median = result.data.median;
                 });
+        }
+    }
+}]);
+
+app.directive('comments', ['$http', function($http){
+    return{
+        restrict: 'A',
+        templateUrl: '../../templates/comments.html',
+        link: function(scope, element, attrs){
+            var articlePath = attrs.articlePath;
+            scope.comment  = {};
+            $http.get('../../scripts/comments.php?articlePath='+articlePath)
+                .then(function(result){
+
+                    scope.comments = result.data;
+                });
+            scope.update = function(comment){
+                var ts = new Date();
+                comment.timestamp = ts.toJSON();
+                $http.post('../../scripts/comments.php?articlePath='+articlePath, comment)
+                    .then(function(data){
+                        console.log(data.message);
+                        if (data.status == 200){
+                             $http.get('../../scripts/comments.php?articlePath='+articlePath)
+                            .then(function(result){
+                                scope.comments = result.data;
+                            });
+                        }
+                    });
+            }
         }
     }
 }]);
