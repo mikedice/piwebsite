@@ -44,9 +44,9 @@ app.directive('comments', ['$http', function($http){
                 var ts = new Date();
                 comment.timestamp = ts.toJSON();
                 $http.post('../../scripts/comments.php?articlePath='+articlePath, comment)
-                    .then(function(data){
-                        console.log(data.message);
-                        if (data.status == 200){
+                    .then(function(success){
+                        console.log(success.data);
+                        if (success.status == 200){
                              $http.get('../../scripts/comments.php?articlePath='+articlePath)
                             .then(function(result){
                                 scope.comments = result.data;
