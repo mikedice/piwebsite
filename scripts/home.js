@@ -28,6 +28,11 @@ app.directive('pressureGraph', ['$http', function($http){
     }
 }]);
 
+app.value('uiTinymceConfig', {
+	menubar:false,
+	footer:false
+});
+
 app.directive('comments', ['$http', function($http){
     return{
         restrict: 'A',
@@ -35,6 +40,7 @@ app.directive('comments', ['$http', function($http){
         link: function(scope, element, attrs){
             var articlePath = attrs.articlePath;
             scope.comment  = {};
+
             $http.get('../../scripts/comments.php?articlePath='+articlePath)
                 .then(function(result){
 
@@ -50,8 +56,15 @@ app.directive('comments', ['$http', function($http){
                              $http.get('../../scripts/comments.php?articlePath='+articlePath)
                             .then(function(result){
                                 scope.comments = result.data;
+                                scope.errorMessage = "";
                             });
                         }
+                        else {
+									scope.errorMessage = success.data;                        
+                        }
+                    },
+                    function(error){
+								scope.errorMessage = error.data;                    
                     });
             }
         }
