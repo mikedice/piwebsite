@@ -1,6 +1,6 @@
 <?php
 
-    // Set Variables
+   // Set Variables
    $LOCAL_ROOT         = "/home/pi/code/website-autosync";
    $LOCAL_REPO_NAME    = "piwebsite";
 	$LOCAL_REPO         = "{$LOCAL_ROOT}/{$LOCAL_REPO_NAME}";
@@ -16,7 +16,7 @@
     	}
 		else {
 			// If the repo does not exist, then clone it into the parent directory
-			echo(shell_exec("/usr/bin/git clone https://github.com/mikedice/piwebsite.git /home/pi/code/website-autosync");
+			echo(shell_exec("/usr/bin/git clone https://github.com/mikedice/piwebsite.git /home/pi/code/website-autosync"));
 		}
   } 
 ?>
