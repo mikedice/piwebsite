@@ -15,7 +15,7 @@ if ( $_POST['payload']) {
     }
     else {
         // If the repo does not exist, then clone it into the parent directory
-        echo(shell_exec("/usr/bin/git clone https://github.com/mikedice/piwebsite.git /home/pi/code/website-autosync"));
+        echo(shell_exec("/usr/bin/git clone https://github.com/mikedice/piwebsite.git /home/pi/code/website-autosync 2>&1"));
     }
 } 
 ?>
